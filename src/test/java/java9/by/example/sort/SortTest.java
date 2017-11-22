@@ -3,7 +3,7 @@ package java9.by.example.sort;
 import org.junit.Test;
 
 import static java9.by.example.sort.Sort.sort;
-import static org.junit.Assert.assertArrayEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class SortTest {
 
@@ -14,6 +14,6 @@ public class SortTest {
         sort(someStrings);
 
         String[] expected = {"aa", "bb", "cc"};
-        assertArrayEquals(expected, someStrings);
+        assertThat(someStrings).isEqualTo(expected);
     }
 }
